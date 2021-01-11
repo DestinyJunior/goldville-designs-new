@@ -38,22 +38,161 @@
       border-top-left-radius: 100%;
       border-top-right-radius: 100%;
     } */
+    .bg-gradient-blue {
+      background: linear-gradient(
+        180deg,
+        rgba(236, 240, 253, 0) 0%,
+        rgba(236, 240, 253, 0.53) 14.32%,
+        #ecf0fd 45.83%,
+        rgba(236, 240, 253, 0.43) 84.33%,
+        rgba(236, 240, 253, 0) 100%
+      );
+    }
+    .map {
+      background: url("./assets/maps.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: auto;
+    }
+
+    .box {
+      box-shadow: 0px 3px 20px #0000000b;
+      --bg-opacity: 1;
+      background-color: #fff;
+      background-color: rgba(255, 255, 255, var(--bg-opacity));
+      border-radius: 0.575rem;
+      position: relative;
+    }
+
+    .report-box {
+      position: relative;
+    }
+
+    .report-box:before {
+      content: "";
+      width: 90%;
+      background: #f9fafc;
+      box-shadow: 0px 3px 20px #0000000b;
+      height: 100%;
+      margin-top: 0.75rem;
+      position: absolute;
+      border-radius: 0.575rem;
+      margin-left: auto;
+      margin-right: auto;
+      right: 0;
+      left: 0;
+    }
+
+    .zoom-in {
+      transition-property: background-color, border-color, color, fill, stroke,
+        opacity, box-shadow, transform;
+      transition-duration: 300ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      --transform-translate-x: 0;
+      --transform-translate-y: 0;
+      --transform-rotate: 0;
+      --transform-skew-x: 0;
+      --transform-skew-y: 0;
+      --transform-scale-x: 1;
+      --transform-scale-y: 1;
+      transform: translateX(var(--transform-translate-x))
+        translateY(var(--transform-translate-y)) rotate(var(--transform-rotate))
+        skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y))
+        scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+      cursor: pointer;
+    }
+
+    .zoom-in:hover {
+      --transform-scale-x: 1.05;
+      --transform-scale-y: 1.05;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    /* .bg-block{
+  background: url('./assets/blockquote.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  
+} */
   </style>
   <body>
+    <div class="w-full px-5 py-10 bg-gradient-blue mb-16">
+      <div class="text-center">
+        <h3 class="text-3xl font-bold text-dark-goldville mb-2">Trusted by <span class="text-blue-gold">amazing</span> <br> people all over the world</h3>
+      </div>
+      <div
+        class="container w-2/3 mx-auto h-96 map flex flex-col items-center justify-center"
+      >
+        <div class="report-box w-6/12 zoom-in">
+          <div class="box bg-block">
+            <div class="p-10">
+              <p class="text-blue-gold font-bold">
+                Goldville is the best trading platform, and I love that I can
+                just buy airtime from my wallet and use the credit card to order
+                things online.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-5/12 mt-6">
+          <div class="flex justify-end text-right">
+            <button>
+              <svg
+                width="24"
+                height="12"
+                viewBox="0 0 24 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.3"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.06497 0.186984C6.16475 0.228389 6.25538 0.289073 6.33167 0.365559C6.40816 0.441852 6.46884 0.532485 6.51025 0.632267C6.55165 0.732048 6.57297 0.839018 6.57297 0.94705C6.57297 1.05508 6.55165 1.16205 6.51025 1.26183C6.46884 1.36161 6.40816 1.45225 6.33167 1.52854L2.80527 5.05361H22.9758C23.1936 5.05361 23.4025 5.14014 23.5566 5.29417C23.7106 5.44819 23.7971 5.6571 23.7971 5.87492C23.7971 6.09275 23.7106 6.30165 23.5566 6.45568C23.4025 6.6097 23.1936 6.69624 22.9758 6.69624H2.80525L6.33167 10.2213C6.4859 10.3755 6.57254 10.5847 6.57254 10.8028C6.57254 11.0209 6.4859 11.2301 6.33167 11.3843C6.17745 11.5385 5.96828 11.6252 5.75018 11.6252C5.53208 11.6252 5.32291 11.5385 5.16869 11.3843L0.240808 6.45643C0.164322 6.38013 0.10364 6.2895 0.0622349 6.18972C0.0208302 6.08993 -0.000482559 5.98297 -0.000482559 5.87493C-0.000482559 5.7669 0.0208302 5.65993 0.0622349 5.56015C0.10364 5.46037 0.164322 5.36974 0.240808 5.29344L5.16869 0.365559C5.24499 0.289073 5.33562 0.228389 5.4354 0.186984C5.53518 0.14558 5.64215 0.124268 5.75018 0.124268C5.85822 0.124268 5.96518 0.14558 6.06497 0.186984Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+            <button class="ml-2">
+              <svg
+                width="39"
+                height="20"
+                viewBox="0 0 39 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M28.9082 0.602004C28.7455 0.669506 28.5977 0.768439 28.4733 0.893135C28.3486 1.01752 28.2497 1.16528 28.1822 1.32795C28.1147 1.49062 28.08 1.66502 28.08 1.84114C28.08 2.01727 28.1147 2.19166 28.1822 2.35434C28.2497 2.51701 28.3486 2.66477 28.4733 2.78915L34.2225 8.53609H1.33875C0.983627 8.53609 0.643049 8.67716 0.391938 8.92827C0.140828 9.17938 -0.000244141 9.51996 -0.000244141 9.87508C-0.000244141 10.2302 0.140828 10.5708 0.391938 10.8219C0.643049 11.073 0.983627 11.2141 1.33875 11.2141H34.2225L28.4733 16.9611C28.2219 17.2125 28.0807 17.5535 28.0807 17.9091C28.0807 18.2646 28.2219 18.6057 28.4733 18.8571C28.7248 19.1085 29.0658 19.2498 29.4214 19.2498C29.7769 19.2498 30.1179 19.1085 30.3694 18.8571L38.4033 10.8231C38.528 10.6987 38.627 10.551 38.6945 10.3883C38.762 10.2256 38.7967 10.0512 38.7967 9.87511C38.7967 9.69898 38.762 9.52459 38.6945 9.36191C38.627 9.19924 38.528 9.05148 38.4033 8.9271L30.3694 0.893135C30.245 0.768439 30.0972 0.669506 29.9345 0.602004C29.7719 0.534501 29.5975 0.499756 29.4214 0.499756C29.2452 0.499756 29.0708 0.534501 28.9082 0.602004Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="w-full px-16 mb-6">
       <div class="px-16">
         <div class="container text-center mb-12">
-              <h2 class="text-dark-goldville text-4xl font-bold">Why Choose Us.</h2>
-              <p class="text-dark-goldville font-light text-lg mt-2">The most trusted cryptocurrency and trading platform</p>
+          <h2 class="text-dark-goldville text-4xl font-bold">Why Choose Us.</h2>
+          <p class="text-dark-goldville font-light text-lg mt-2">
+            The most trusted cryptocurrency and trading platform
+          </p>
         </div>
         <div class="container grid grid-cols-3 gap-10">
           <div class="px-2 py-2">
             <div class="text-center">
               <img src="./assets/shield.svg" class="mx-auto" alt="" />
-              <h2 class="text-dark-goldville font-bold text-2xl mt-3">Security</h2>
+              <h2 class="text-dark-goldville font-bold text-2xl mt-3">
+                Security
+              </h2>
               <p class="text-sm mt-2 text-gray-gold">
-                We store the vast majority of the digital assets in secure offline
-                storage.
+                We store the vast majority of the digital assets in secure
+                offline storage.
               </p>
               <p class="text-blue-gold font-bold">Get Started ></p>
             </div>
@@ -61,10 +200,12 @@
           <div class="px-2 py-1">
             <div class="text-center">
               <img src="./assets/people.svg" class="mx-auto" alt="" />
-              <h2 class="text-dark-goldville font-bold text-2xl mt-3">Streamlined</h2>
+              <h2 class="text-dark-goldville font-bold text-2xl mt-3">
+                Streamlined
+              </h2>
               <p class="text-sm mt-2 text-gray-gold">
-                We store the vast majority of the digital assets in secure offline
-                storage.
+                We store the vast majority of the digital assets in secure
+                offline storage.
               </p>
               <p class="text-blue-gold font-bold">Get Started ></p>
             </div>
@@ -72,18 +213,18 @@
           <div class="px-2 py-1">
             <div class="text-center">
               <img src="./assets/house.svg" class="mx-auto" alt="" />
-              <h2 class="text-dark-goldville font-bold text-2xl mt-3">Your Bank</h2>
+              <h2 class="text-dark-goldville font-bold text-2xl mt-3">
+                Your Bank
+              </h2>
               <p class="text-sm mt-2 text-gray-gold">
-                We store the vast majority of the digital assets in secure offline
-                storage.
+                We store the vast majority of the digital assets in secure
+                offline storage.
               </p>
               <p class="text-blue-gold font-bold">Get Started ></p>
             </div>
           </div>
         </div>
       </div>
-     
-     
     </div>
     <div class="w-full">
       <div class="pt-2">
