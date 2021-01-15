@@ -53,6 +53,8 @@
       background-repeat: no-repeat;
       background-position: center center;
       background-size: auto;
+      /* width: 100%;
+      height: 100%; */
     }
 
     .box {
@@ -121,6 +123,10 @@
       height: 33rem;
     }
 
+    .h-img {
+      height: 15rem;
+    }
+
     .curved {
       background: url("./assets/curved.svg") no-repeat;
       background-position: center;
@@ -132,7 +138,6 @@
       height: 100%;
     }
 
-
     .bg-blue-gold {
       background-color: #0083ff;
     }
@@ -140,11 +145,130 @@
     .z-1000 {
       z-index: 1990 !important;
     }
+
+    .img-card {
+      background: #ffffff;
+
+      /* Box-shadow */
+      box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+      border-radius: 20px;
+    }
+    /* .bg-card-1{ */
+      /* background: url('./assets/giftcarrd.png'); */
+      /* background-repeat: no-repeat; */
+      /* background-position: center center; */
+      /* width: 100%; */
+      /* height: 100%; */
+    /* } */
+
+    .banner {
+      background: linear-gradient(180deg, #E5EFFF 0%, rgba(229, 239, 255, 0.262661) 83.7%, rgba(229, 239, 255, 0) 100%);
+    }
   </style>
   <body>
-    <div class="w-full mb-10"></div>
+    <div class="w-full banner mb-20">
+        <nav class="mb-10 h-auto py-2 px-2 text-dark-goldville">
+          <div class="container h-auto mx-auto flex items-center justify-between">
+            <div class="">
+                <div><img src="" alt="Goldville"></div>
+            </div>
+            <div>
+              <ul class="flex items-center justify-between space-x-9">
+                <li>Rates</li>
+                <li>Products</li>
+                <li>Company</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between space-x-3">
+              <a href="">Login</a>
+              <button class="px-4 py-1 bg-green-goldville text-white rounded">Get Started</button>
+            </div>
+          </div>
+        </nav>
+        <div class="container mx-auto">
+            <div class="flex items-start justify-between">
+                <div class=" flex-shrink-0">
+                  <h2 class="text-dark-goldville font-bold text-7xl mb-3">Best Digital <br> Currency  Trading <br> Platform</h2>
+                  <p class="text-sm mb-3 text-gray-gold leading-7">Sell your Bitcoin, Ethereum, Theter, Amazon, iTunes, Google Play, Netflix, <br> Walmart, Paypal, Payoneer etc. for instant Payment on Goldville.</p>
+                  <div class="flex items-center">
+                    <button class="px-6 mr-2 py-2 rounded-full bg-green-goldville text-white">Start Trading</button>
+                    <span class="text-sm">or <span class="text-blue-gold font-bold">About Us ></span></span>
+                  </div>
+                </div>
+                <div>
+                  <img src="./assets/featured-image.svg" class="w-auto h-auto" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full mb-24">
+      <div class="container mx-auto">
+        <div class="text-center mb-8">
+          <h2 class="text-dark-goldville text-4xl font-bold">
+            Trade With Our Trusted Partners
+          </h2>
+          <p class="text-dark-goldville font-light text-lg mt-2">
+            We are making our membership plan to think about our Clients. You
+            can take the membership <br />
+            with matching your needs. there is no hidden charge.
+          </p>
+        </div>
+        <!-- <div class="grid grid-cols-3">
+          <div>
+            <div class="img-card bg-card-1">
+              <img src="./assets/giftcarrd.png"  alt="giftcards" />
+            </div>
+            <div class="mx-10">
+              <h4 class="text-lg text-dark-goldville font-bold mb-3">
+                Trade Gift Cards
+              </h4>
+              <p class="text-sm text-dark-goldville mb-3">
+                Our platform allows you to buy and sell your Gift Cards such as
+                Amazon, Google Play, iTunes, Home depot, Steam, Best buy, Target
+                etc fast confirmation and get Instant Paym
+              </p>
+              <p class="text-sm text-blue-gold font-bold">Get Started ></p>
+            </div>
+          </div>
+          <div>
+            <img
+              src="./assets/person-phone.png"
+              class="h-img"
+              alt="person-phone"
+            />
+            <div class="mx-10">
+              <h4 class="text-lg text-dark-goldville font-bold mb-3">
+                Trade & store Cryptocurrency
+              </h4>
+              <p class="text-sm text-dark-goldville mb-3">
+                Our software is built up with security trends to provide an
+                enabling platform for you to sell and buy Cryptocurrencies such
+                as Bitcoin, Ethereum, Litecoin, BCH etc at your pace and
+                comfort.
+              </p>
+              <p class="text-sm text-blue-gold font-bold">Get Started ></p>
+            </div>
+          </div>
+          <div>
+            <img src="./assets/loadairtime.png" class="" alt="giftcards" />
+            <div class="mx-10">
+              <h4 class="text-lg text-dark-goldville font-bold mb-3">
+                Pay Bills & Airtime
+              </h4>
+              <p class="text-sm text-dark-goldville mb-3">
+                The platform allows you easily Exchange your online transfers
+                such as Paypal, Payoneer, RMB, Skrill, Venmo, Cash app and
+                others with no stress at all. You can buy airtime one line.
+              </p>
+              <p class="text-sm text-blue-gold font-bold">Get Started ></p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
     <div class="w-full curved mb-10 py-5">
-      <div class="container w-3/4 mx-auto space-y-9 px-16 ">
+      <div class="container w-3/4 mx-auto space-y-9 px-16">
         <div class="flex items-center">
           <img src="./assets/card.svg" alt="" class="w-72 z-auto -mt-14" />
           <div class="flex flex-col items-start text-white ml-5">
@@ -195,7 +319,7 @@
         </h3>
       </div>
       <div
-        class="container w-2/3 mx-auto h-98 map flex flex-col items-center justify-center"
+        class="container w-3/4 mx-auto h-98 map flex flex-col items-center justify-center"
       >
         <div class="report-box w-6/12 zoom-in">
           <div class="box bg-block">
