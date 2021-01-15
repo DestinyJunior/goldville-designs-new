@@ -153,8 +153,8 @@
     }
 
     .img-card {
-      height: 240px;
-      width: 350px;
+      height: 15rem;
+      width: 21.8rem;
       background: #ffffff;
 
       /* Box-shadow */
@@ -173,10 +173,7 @@
 
     } */
 
-    .banner-heading {
-      font-size: 5.4rem;
-      line-height: 1;
-    }
+   
     .banner {
       background: linear-gradient(
         180deg,
@@ -208,6 +205,20 @@
       background-position: bottom 200% center; 
       background-size: auto;
     }
+
+    @media (min-width: 768px) {
+      .banner-heading {
+      font-size: 5.4rem;
+      line-height: 1;
+    }
+    }
+
+    @media (max-width: 768px) {
+        .img-card {
+          height: 13rem;
+        width: 16.8rem;
+        }
+    }
   </style>
   <body>
     <div class="w-full banner mb-20">
@@ -217,31 +228,36 @@
             <div>
               <img
                 src="./assets/goldville-org.svg"
-                class="h-8"
+                class="h-6 md:h-8"
                 alt="Goldville"
               />
             </div>
           </div>
-          <div>
-            <ul class="flex items-center justify-between space-x-9">
-              <li>Rates</li>
-              <li>Products</li>
-              <li>Company</li>
-              <li>Blog</li>
+          <div class="hidden sm:block">
+            <ul class="flex flex-row items-center justify-between space-x-9">
+              <li><a>Rates</a></li>
+              <li><a>Products</a></li>
+              <li><a>Company</a></li>
+              <li><a>Blog</a></li>
             </ul>
           </div>
-          <div class="flex items-center justify-between space-x-3">
+          <div class="hidden md:flex items-center justify-between space-x-3">
             <a href="" class="font-bold">Log In</a>
             <button class="px-4 py-2 bg-green-goldville text-white rounded">
               Get Started
             </button>
           </div>
+          <div class="sm:hidden">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2 w-8 h-8 text-white transform -rotate-90"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </button>
+            </div>
         </div>
       </nav>
-      <div class="container mx-auto">
-        <div class="flex items-start justify-between">
+      <div class="container mx-6 md:mx-auto">
+        <div class="sm:flex sm:items-start sm:justify-between">
           <div class="flex-shrink-0">
-            <h2 class="text-dark-goldville font-bold banner-heading mb-3">
+            <h2 class="text-dark-goldville font-bold text-4xl banner-heading mb-3">
               Best Digital <br />
               Currency Trading <br />
               Platform
@@ -263,25 +279,25 @@
               >
             </div>
           </div>
-          <div class="flex-shrink-0 animate__fadeInRight" >
+          <div class="hidden sm:block sm:flex-shrink-0 animate__fadeInRight" >
             <img src="./assets/featured-image.svg" class="w-auto h-96" alt="" />
           </div>
         </div>
       </div>
     </div>
     <div class="w-full mb-24">
-      <div class="container mx-auto">
+      <div class="container mx-10 md:mx-auto">
         <div class="text-center mb-8">
           <h2 class="text-dark-goldville text-4xl font-bold">
             Trade With Our Trusted Partners
           </h2>
-          <p class="text-dark-goldville font-light text-lg mt-2">
+          <p class="text-dark-goldville font-light text-sm md:text-lg mt-2">
             We are making our membership plan to think about our Clients. You
             can take the membership <br />
             with matching your needs. there is no hidden charge.
           </p>
         </div>
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <div class="img-card">
               <img
@@ -448,15 +464,15 @@
         </div>
       </div>
     </div>
-    <div class="w-full px-16 mb-6">
-      <div class="px-16">
+    <div class="w-full px-10 md:px-16 mb-6 mt-10">
+      <div class="md:px-16">
         <div class="container text-center mb-12">
           <h2 class="text-dark-goldville text-4xl font-bold">Why Choose Us.</h2>
           <p class="text-dark-goldville font-light text-lg mt-2">
             The most trusted cryptocurrency and trading platform
           </p>
         </div>
-        <div class="container grid grid-cols-3 gap-10">
+        <div class="container grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div class="px-2 py-2">
             <div class="text-center">
               <img src="./assets/shield.svg" class="mx-auto" alt="" />
@@ -511,16 +527,16 @@
         <div class="mx-20 bg-curved-top">
           <img
             src="./assets/websitefooterimage2.png"
-            class="mx-auto"
+            class="mx-auto w-full"
             alt="websiteimg"
           />
         </div>
       </div>
     </div>
-    <div class="w-full bg-purple-goldville px-16 py-8">
-      <div class="flex items-center justify-between text-white px-16">
-        <h1 class="text-4xl">Ready to Start Trading?</h1>
-        <button class="px-4 py-2 border border-white rounded-full">
+    <div class="w-full bg-purple-goldville px-8 md:px-16 py-8">
+      <div class="flex items-center justify-between text-white md:px-16">
+        <h1 class="text-2xl md:text-4xl">Ready to Start Trading?</h1>
+        <button class="flex-shrink-0 px-2 md:px-4 py-2 border border-white rounded-full text-sm">
           GET STARTED
         </button>
       </div>
@@ -528,16 +544,16 @@
     <!-- footer -->
     <footer class="">
       <!-- top footer -->
-      <div class="bg-green-goldville px-16 py-12">
-        <div class="container mx-auto px-16">
-          <div class="flex justify-between text-white">
+      <div class="bg-green-goldville px-10 md:px-16 py-12">
+        <div class="container mx-auto md:px-16">
+          <div class="md:flex md:justify-between text-white">
             <div>
               <h5 class="mb-3"><u>WHO WE ARE</u></h5>
               <p>About</p>
               <p>Team</p>
               <p>Career</p>
             </div>
-            <div>
+            <div class="mt-6 md:mt-0">
               <h5 class="mb-3"><u>PRODUCTS</u></h5>
               <p>Giftcard</p>
               <p>Bitcoin</p>
@@ -546,13 +562,13 @@
               <p>Virtual Card</p>
               <p>Email Newsletter</p>
             </div>
-            <div>
+            <div class="mt-6 md:mt-0">
               <h5 class="mb-3"><u>SUPPORTS</u></h5>
               <p>Support policy</p>
               <p>Contact</p>
               <p>COVID-19 Resources</p>
             </div>
-            <div class="select-none ml-28">
+            <div class="select-none md:ml-28 mt-6 md:mt-0">
               <h5 class="mb-3"><u>ABOUTUS</u></h5>
               <p class="">
                 Goldville is a Nigeria-based <br />
@@ -567,9 +583,9 @@
       </div>
 
       <!-- bottom footer -->
-      <div class="py-4 px-16 bg-white">
-        <div class="flex items-center justify-between">
-          <div>
+      <div class="py-4 md:px-16 px-5 bg-white">
+        <div>
+            <div class="md:flex md:items-center md:justify-between">
             <button>
               <svg
                 class="w-7 h-5"
@@ -610,13 +626,13 @@
               </svg>
             </button>
           </div>
-          <div class="text-sm">
+          <div class="text-xs md:text-sm">
             <p>
               COPYRIGHT GOLDVILLE 2020 - TERMS & CONDITIONS &middot; PRIVACY
               POLICY
             </p>
           </div>
-          <div>
+          <div  class="">
             <svg
               class="w-40 h-6"
               viewBox="0 0 161 27"
