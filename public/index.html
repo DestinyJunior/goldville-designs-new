@@ -6,9 +6,9 @@
     <title>GoldVille | Home page</title>
     <link rel="stylesheet" href="./app.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <style>
     .bg-green-goldville {
@@ -115,18 +115,10 @@
     }
 
     .bg-block {
-      background-image: url('./assets/blockquote.png');
+      background-image: url("./assets/blockquote.png");
       background-repeat: no-repeat;
       background-size: 6rem;
       background-position: top 10% center;
-    }
-
-    /* .img-r-c{
-     
-    } */
-
-    .h-98 {
-      height: 33rem;
     }
 
     .h-img {
@@ -153,8 +145,6 @@
     }
 
     .img-card {
-      height: 15rem;
-      width: 21.8rem;
       background: #ffffff;
 
       /* Box-shadow */
@@ -162,18 +152,10 @@
       border-radius: 20px;
     }
 
-    .card-body {
-      width: 350px;
-    }
-
     .rounded-img {
       border-radius: 20px;
     }
-    /* .bg-card {
 
-    } */
-
-   
     .banner {
       background: linear-gradient(
         180deg,
@@ -184,40 +166,40 @@
     }
 
     .bg-images {
-      background-image: url("./assets/tl.png"),
-        url("./assets/tr.png"), url("./assets/bl.png"),
-        url("./assets/br.png"), url("./assets/cl.png"), url("./assets/cr.png"), linear-gradient(
-        180deg,
-        rgba(236, 240, 253, 0) 0%,
-        rgba(236, 240, 253, 0.53) 14.32%,
-        #ecf0fd 45.83%,
-        rgba(236, 240, 253, 0.43) 84.33%,
-        rgba(236, 240, 253, 0) 100%
-      );
-      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-      background-position: top 17% left 20%, top 15% right 30%, bottom 18% left 16%, bottom 10% right 21.6%, left 10% center, right 16% center, 100%;
+      background-image: url("./assets/tl.png"), url("./assets/tr.png"),
+        url("./assets/bl.png"), url("./assets/br.png"), url("./assets/cl.png"),
+        url("./assets/cr.png"),
+        linear-gradient(
+          180deg,
+          rgba(236, 240, 253, 0) 0%,
+          rgba(236, 240, 253, 0.53) 14.32%,
+          #ecf0fd 45.83%,
+          rgba(236, 240, 253, 0.43) 84.33%,
+          rgba(236, 240, 253, 0) 100%
+        );
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+        no-repeat, no-repeat;
+      background-position: top 17% left 20%, top 15% right 30%,
+        bottom 18% left 16%, bottom 10% right 21.6%, left 10% center,
+        right 16% center, 100%;
       background-size: 4.2rem, 4rem, 3.5rem, 3.1rem, 3.2rem, 4.6rem, 100%;
     }
 
-    .bg-curved-top{
-      background: url('./assets/crectangle.png');
+    .bg-curved-top {
+      background: url("./assets/crectangle.png");
       background-repeat: no-repeat;
-      background-position: bottom 200% center; 
+      background-position: bottom 200% center;
       background-size: auto;
     }
 
     @media (min-width: 768px) {
       .banner-heading {
-      font-size: 5.4rem;
-      line-height: 1;
-    }
+        font-size: 5.4rem;
+        line-height: 1;
+      }
     }
 
     @media (max-width: 768px) {
-        .img-card {
-          height: 13rem;
-        width: 16.8rem;
-        }
     }
   </style>
   <body>
@@ -249,15 +231,32 @@
           </div>
           <div class="sm:hidden">
             <button>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2 w-8 h-8 text-white transform -rotate-90"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-bar-chart-2 w-8 h-8 text-goldville-dark transform -rotate-90"
+              >
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
             </button>
-            </div>
+          </div>
         </div>
       </nav>
       <div class="container mx-6 md:mx-auto">
         <div class="sm:flex sm:items-start sm:justify-between">
           <div class="flex-shrink-0">
-            <h2 class="text-dark-goldville font-bold text-4xl banner-heading mb-3">
+            <h2
+              class="text-dark-goldville font-bold text-4xl banner-heading mb-3"
+            >
               Best Digital <br />
               Currency Trading <br />
               Platform
@@ -279,14 +278,14 @@
               >
             </div>
           </div>
-          <div class="hidden sm:block sm:flex-shrink-0 animate__fadeInRight" >
+          <div class="hidden sm:block sm:flex-shrink-0 animate__fadeInRight">
             <img src="./assets/featured-image.svg" class="w-auto h-96" alt="" />
           </div>
         </div>
       </div>
     </div>
-    <div class="w-full mb-24">
-      <div class="container mx-10 md:mx-auto">
+    <div class="w-full mb-24 px-10">
+      <div class="container">
         <div class="text-center mb-8">
           <h2 class="text-dark-goldville text-4xl font-bold">
             Trade With Our Trusted Partners
@@ -298,15 +297,15 @@
           </p>
         </div>
         <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <div>
-            <div class="img-card">
+          <div class="w-full">
+            <div class="w-80 md:w-82 bg-white img-card">
               <img
                 src="./assets/giftcarrd.png"
-                class="rounded-img"
+                class="rounded-img h-img"
                 alt="giftcards"
               />
             </div>
-            <div class="card-body mt-10">
+            <div class="w-80 md:w-82 mt-10">
               <h4 class="text-lg text-dark-goldville font-bold mb-3">
                 Trade Gift Cards
               </h4>
@@ -318,15 +317,15 @@
               <p class="text-sm text-blue-gold font-bold">Get Started ></p>
             </div>
           </div>
-          <div>
-            <div class="img-card">
+          <div class="w-full">
+            <div class="w-80 md:w-82 bg-white img-card">
               <img
                 src="./assets/person-phone.png"
-                class="h-img"
+                class="h-img "
                 alt="person-phone"
               />
             </div>
-            <div class="card-body mt-10">
+            <div class="w-80 md:w-82 mt-10">
               <h4 class="text-lg text-dark-goldville font-bold mb-3">
                 Trade & store Cryptocurrency
               </h4>
@@ -339,11 +338,11 @@
               <p class="text-sm text-blue-gold font-bold">Get Started ></p>
             </div>
           </div>
-          <div>
-            <div class="img-card">
-              <img src="./assets/loadairtime.png" class="" alt="giftcards" />
+          <div class="w-full mx-auto">
+            <div class="w-80 md:w-82 bg-white img-card">
+              <img src="./assets/loadairtime.png" class="h-img" alt="giftcards" />
             </div>
-            <div class="card-body mt-10">
+            <div class="w-80 md:w-82 mt-10">
               <h4 class="text-lg text-dark-goldville font-bold mb-3">
                 Pay Bills & Airtime
               </h4>
@@ -359,20 +358,20 @@
       </div>
     </div>
     <div class="w-full curved mb-10 py-5">
-      <div class="container w-3/4 mx-auto space-y-9 px-16">
-        <div class="flex items-center">
+      <div class="container md:w-3/4 mx-auto space-y-9 px-10 md:px-16">
+        <div class="md:flex items-center">
           <img src="./assets/card.svg" alt="" class="w-72 z-auto -mt-14" />
           <div class="flex flex-col items-start text-white ml-5">
-            <h4 class="mb-3 font-bold text-2xl">
+            <h4 class="mb-3 font-bold text-2xl mt-5 md:mt-0">
               Virtual and physical <br />
               Credit Card
             </h4>
             <div class="mb-3">
-              <p class="text-sm">
-                Use your virtual debit card online to pay for your <br />
-                Netflix subscription, shopping on Amazon, or use <br />
-                your credit card physical card in any acceptable <br />
-                store, with either your wallet or your bitcoin.
+              <p class="text-sm text-justify">
+                Use your virtual debit card online to pay for your Netflix
+                subscription, shopping on Amazon, or use your credit card
+                physical card in any acceptable store, with either your wallet
+                or your bitcoin.
               </p>
             </div>
             <button class="px-4 py-2 bg-green-goldville rounded-full">
@@ -380,7 +379,7 @@
             </button>
           </div>
         </div>
-        <div class="flex items-center justify-end">
+        <div class="md:flex items-center justify-end">
           <div class="flex flex-col items-start text-white mr-5">
             <h4 class="mb-3 font-bold text-2xl">
               The best way to trade <br />
@@ -402,18 +401,18 @@
         </div>
       </div>
     </div>
-    <div class="w-full px-5 py-10  mb-16 bg-images">
+    <div class="w-full px-5 py-10 mb-16 bg-images">
       <div class="text-center">
-        <h3 class="text-3xl font-bold text-dark-goldville mb-4 ">
+        <h3 class="text-3xl font-bold text-dark-goldville mb-4">
           Trusted by <span class="text-blue-gold">amazing</span> <br />
           people all over the world
         </h3>
       </div>
       <div class="container w-full h-full">
         <div
-          class="container w-3/4 mx-auto h-98 map flex flex-col items-center justify-center"
+          class="container md:w-3/4 mx-auto md:h-98 map flex flex-col items-center justify-center"
         >
-          <div class="report-box w-6/12 zoom-in">
+          <div class="report-box md:w-6/12 zoom-in">
             <div class="box bg-block">
               <div class="px-12 py-12">
                 <p class="text-blue-gold font-bold">
@@ -472,7 +471,9 @@
             The most trusted cryptocurrency and trading platform
           </p>
         </div>
-        <div class="container grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="container grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
+        >
           <div class="px-2 py-2">
             <div class="text-center">
               <img src="./assets/shield.svg" class="mx-auto" alt="" />
@@ -527,7 +528,7 @@
         <div class="mx-20 bg-curved-top">
           <img
             src="./assets/websitefooterimage2.png"
-            class="mx-auto w-full"
+            class="mx-auto"
             alt="websiteimg"
           />
         </div>
@@ -536,7 +537,9 @@
     <div class="w-full bg-purple-goldville px-8 md:px-16 py-8">
       <div class="flex items-center justify-between text-white md:px-16">
         <h1 class="text-2xl md:text-4xl">Ready to Start Trading?</h1>
-        <button class="flex-shrink-0 px-2 md:px-4 py-2 border border-white rounded-full text-sm">
+        <button
+          class="flex-shrink-0 px-2 md:px-4 py-2 border border-white rounded-full text-sm"
+        >
           GET STARTED
         </button>
       </div>
@@ -584,8 +587,8 @@
 
       <!-- bottom footer -->
       <div class="py-4 md:px-16 px-5 bg-white">
-        <div>
-            <div class="md:flex md:items-center md:justify-between">
+        <div class="flex items-center justify-between">
+          <div class="md:flex md:items-center md:justify-between">
             <button>
               <svg
                 class="w-7 h-5"
@@ -632,7 +635,7 @@
               POLICY
             </p>
           </div>
-          <div  class="">
+          <div class="">
             <svg
               class="w-40 h-6"
               viewBox="0 0 161 27"
