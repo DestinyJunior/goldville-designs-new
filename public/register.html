@@ -3,8 +3,221 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+    <title>Signup | Goldville</title>
     <link rel="stylesheet" href="./app.css" />
+
+    <style>
+      .bg-green-goldville {
+        background-color: #62d467;
+      }
+      .text-green-goldville {
+        color: #62d467;
+      }
+      .text-break {
+        word-break: break-all;
+      }
+      .bg-purple-goldville {
+        background-color: #5f37ef;
+      }
+
+      .text-blue-goldville-100 {
+        color: #29aaf3;
+      }
+
+      .text-blue-gold {
+        color: #299ef3;
+      }
+      .text-dark-goldville {
+        color: #272d4e;
+      }
+
+      .text-gray-gold {
+        color: #94a2b3;
+      }
+
+      .form {
+        height: 31rem;
+      }
+      .bg-input {
+        background-color: #f7f9fb;
+      }
+
+      input::placeholder {
+        color: #272d4e;
+        opacity: 1;
+      }
+
+      .font-bold-m {
+        font-weight: 500;
+      }
+
+      .bg-blop {
+        background-image: url("./assets/blop.svg"),
+          url("./assets/cardsignup.svg"), url("./assets/smileyl.svg"),
+          url("./assets/smileyr.svg");
+        background-repeat: no-repeat;
+        background-position: center, top 60% center, top 40% left 30%,
+          bottom 28% right 30%;
+        background-size: cover, 19rem, 7rem, 7rem;
+      }
+
+      /* .bg-card{
+        background-image: url('./assets/cardsignup.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+      } */
+
+      /* .right-84{
+        right: 21rem;    
+      } */
+
+      @media screen and (max-width: 1200px) {
+        .text-7xl {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="w-screen h-screen flex">
+      <div class="w-full md:w-1/3 h-full bg-white px-3 py-2">
+        <div
+          class="w-full h-full flex flex-col items-center justify-between text-dark-goldville"
+        >
+          <!-- top -->
+          <div class="w-full flex items-center justify-between py-1">
+            <img src="./assets/goldville-org.svg" class="h-6" alt="goldville" />
+
+            <div class="flex-shrink-0 flex items-center justify-end">
+              <button>
+                <svg
+                  class="w-6 h-6"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M26.9163 17L7.08301 17"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16.9997 26.9166L7.08301 17L16.9997 7.08329"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <span
+                >Back to
+                <span class="text-green-goldville font-bold"
+                  ><a href="./index.html">Goldville</a></span
+                ></span
+              >
+            </div>
+          </div>
+
+          <div class="form w-5/6">
+            <form class="h-full flex flex-col items-start justify-between">
+              <div class="space-y-4">
+                <h2 class="text-4xl font-bold">Signup</h2>
+                <p class="text-lg">Create a goldville account.</p>
+              </div>
+              <div class="w-full space-y-6">
+                <input
+                  type="text"
+                  class="w-full bg-input px-3 py-3 rounded-md"
+                  placeholder="Username"
+                />
+                <input
+                  type="email"
+                  class="w-full bg-input px-3 py-3 rounded-md"
+                  placeholder="email"
+                />
+                <input
+                  type="password"
+                  class="w-full bg-input px-3 py-3 rounded-md"
+                  placeholder="Password"
+                />
+                <input
+                  type="password"
+                  class="w-full bg-input px-3 py-3 rounded-md"
+                  placeholder="Confirm Password"
+                />
+              </div>
+              <p class="text-sm md:text-base">
+                By clicking the Signup button below, you agree to our
+                <span class="text-green-goldville font-bold"
+                  ><a href="">terms and service</a></span
+                >
+              </p>
+
+              <button
+                class="w-full bg-green-goldville text-white text-lg font-bold py-3 rounded-md"
+              >
+                Sigup
+              </button>
+
+              <div class="w-full">
+                <p class="text-center font-bold-m">
+                  have a goldville account ?
+                  <span class="text-green-goldville font-bold text-center"
+                    ><a href="./login.html">Login</a></span
+                  >
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <div class="w-full flex items-center justify-between">
+            <span class="text-xs font-bold-m"
+              >2020 © All Rights Reserved Goldville CS LTD</span
+            >
+            <span class="text-xs flex-shrink-0">I want to <span class="text-blue-goldville-100 font-bold"><a href="">trade on goldville</a></span></span>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block md:w-2/3 md:h-full md:bg-white">
+        <div class="w-full h-full bg-green-goldville bg-blop">
+          <div class="px-20 pt-5">
+            <h2 class="text-dark-goldville text-7xl font-bold">
+              Use Goldville Card your shipping
+            </h2>
+          </div>
+          <button class="absolute top-2 right-3">
+            <svg
+              class="w-12 h-12"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="27" cy="27" r="27" fill="#62D467" />
+              <path
+                d="M37 17L17 37"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17 17L37 37"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button class="absolute bottom-18 right-82">
+            <img src="./assets/slider.svg" alt="slider" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
