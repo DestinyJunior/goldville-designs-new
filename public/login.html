@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | Goldville</title>
     <link rel="stylesheet" href="./app.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <style>
       .bg-green-goldville {
         background-color: #62d467;
@@ -47,9 +50,12 @@
       }
 
       .bg-blop {
-        background-image: url("./assets/blop.svg"), url('./assets/cardsignup.svg'), url('./assets/smileyl.svg'), url('./assets/smileyr.svg');
+        background-image: url("./assets/blop.svg"),
+          url("./assets/cardsignup.svg"), url("./assets/smileyl.svg"),
+          url("./assets/smileyr.svg");
         background-repeat: no-repeat;
-        background-position: center, top 60% center, top 40% left 30%, bottom 28% right 30%;
+        background-position: center, top 60% center, top 40% left 30%,
+          bottom 28% right 30%;
         background-size: cover, 19rem, 7rem, 7rem;
       }
 
@@ -65,9 +71,26 @@
       } */
 
       @media screen and (max-width: 1200px) {
-            .text-7xl{
-                font-size: 3.5rem;
-            }
+        .text-7xl {
+          font-size: 3.5rem;
+        }
+      }
+      .slides {
+        display: none;
+        /* transition: 0.6s ease; */
+      }
+
+      /* .active,
+      .dot:hover {
+        background-color: #62d467;
+      } */
+
+      .bg-slide {
+        background-color: #f3f7f9;
+      }
+
+      .left-center {
+        left: 44%;
       }
     </style>
   </head>
@@ -108,7 +131,7 @@
               <span
                 >Back to
                 <span class="text-green-goldville font-bold"
-                  >Goldville</span
+                  ><a href="./index.html">Goldville</a></span
                 ></span
               >
             </div>
@@ -157,42 +180,209 @@
           </div>
         </div>
       </div>
+      <!-- slideshow carousel -->
       <div class="hidden md:block md:w-2/3 md:h-full md:bg-white">
-        <div class="w-full h-full bg-green-goldville bg-blop">
-          <div class="px-20 pt-5">
-            <h2 class="text-dark-goldville text-7xl font-bold">
-              Use Goldville Card your shipping
-            </h2>
-          </div>
-          <button class="absolute top-2 right-3">
-            <svg
-              class="w-12 h-12"
-              viewBox="0 0 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+        <div class="relative w-full h-full">
+          <div
+            class="slides animate__animated animate__fadeIn w-full h-full bg-green-goldville bg-blop"
+          >
+            <div class="px-20 pt-5">
+              <h2 class="text-dark-goldville text-7xl font-bold">
+                Use Goldville Card your shipping
+              </h2>
+            </div>
+            <button class="absolute top-2 right-3">
+              <svg
+                class="w-12 h-12"
+                viewBox="0 0 54 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="27" cy="27" r="27" fill="#62D467" />
+                <path
+                  d="M37 17L17 37"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17 17L37 37"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div
+              class="absolute w-32 bottom-18 left-center flex items-center space-x-2"
             >
-              <circle cx="27" cy="27" r="27" fill="#62D467" />
-              <path
-                d="M37 17L17 37"
-                stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M17 17L37 37"
-                stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <button class="absolute bottom-18 right-82">
-              <img src="./assets/slider.svg" alt="slider">
-          </button>
+              <button>
+                <img src="./assets/chevron-left.svg" alt="arrowL" />
+              </button>
+              <span>
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="8.35972"
+                    cy="7.70274"
+                    r="7.67808"
+                    fill="#62D467"
+                  />
+                </svg>
+              </span>
+              <span>
+                <svg
+                  width="13"
+                  height="12"
+                  viewBox="0 0 13 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="6.33766"
+                    cy="6.08656"
+                    r="5.75856"
+                    fill="#C4C4C4"
+                  />
+                </svg>
+              </span>
+              <button onclick="nextSlide()">
+                <img src="./assets/chevron-right.svg" alt="arrowR" />
+              </button>
+            </div>
+          </div>
+          <!-- second slide -->
+          <div
+            class="slides animate__animated animate__fadeIn w-full h-full bg-slide"
+          >
+            <div class="mx-24 pt-36 flex flex-col items-center justify-center">
+              <div class="text-center">
+                <h2 class="text-dark-goldville text-7xl font-bold">
+                  Best Digital Currency Trading Platform
+                </h2>
+              </div>
+              <div class="text-center">
+                <p class="text-gray-gold">
+                  Sell your Bitcoin, Ethereum, Theter, Amazon, iTunes, Google
+                  Play, Netflix, Walmart, Paypal, Payoneer etc. for instant
+                  Payment on Goldville.
+                </p>
+              </div>
+            </div>
+            <button class="absolute top-2 right-3">
+              <svg
+                class="w-12 h-12"
+                viewBox="0 0 54 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="27" cy="27" r="27" fill="#62D467" />
+                <path
+                  d="M37 17L17 37"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17 17L37 37"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div
+              class="absolute w-32 bottom-18 left-center flex items-center space-x-2"
+            >
+              <button>
+                <img src="./assets/chevron-left.svg" alt="arrowL" />
+              </button>
+              <span>
+                <svg
+                  width="13"
+                  height="12"
+                  viewBox="0 0 13 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="6.33766"
+                    cy="6.08656"
+                    r="5.75856"
+                    fill="#C4C4C4"
+                  />
+                </svg>
+              </span>
+              <span>
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="8.35972"
+                    cy="7.70274"
+                    r="7.67808"
+                    fill="#62D467"
+                  />
+                </svg>
+              </span>
+              <button onclick="nextSlide()">
+                <img src="./assets/chevron-right.svg" alt="arrowR" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <script>
+      var slideIndex = 0;
+      showSlides(slideIndex);
+
+      function prevSlide() {
+        showSlides(slideIndex--);
+      }
+      function nextSlide() {
+        showSlides(slideIndex++);
+      }
+
+      function showSlides(slide) {
+        var i;
+        var slides = document.getElementsByClassName("slides");
+
+        if (slide > slides.length) {
+          slideIndex = 1;
+        }
+        if (slide < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 8000); // Change image every 8 seconds
+      }
+    </script>
   </body>
 </html>
+
+<!-- <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="6.33766" cy="6.08656" r="5.75856" fill="#C4C4C4"/>
+  </svg>
+   -->
