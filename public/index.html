@@ -145,11 +145,8 @@
     }
 
     .img-card {
-      background: #ffffff;
-
       /* Box-shadow */
-      box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
-      border-radius: 20px;
+      box-shadow: 0px 18px 42px rgba(215, 228, 249, 0.5);
     }
 
     .rounded-img {
@@ -192,6 +189,10 @@
       background-size: auto;
     }
 
+    .stacked-avatars {
+      display: none;
+    }
+
     @media (min-width: 768px) {
       .banner-heading {
         font-size: 5.4rem;
@@ -199,11 +200,60 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
+      .bg-images {
+        background: linear-gradient(
+          180deg,
+          rgba(236, 240, 253, 0) 0%,
+          rgba(236, 240, 253, 0.53) 14.32%,
+          #ecf0fd 45.83%,
+          rgba(236, 240, 253, 0.43) 84.33%,
+          rgba(236, 240, 253, 0) 100%
+        );
+      }
+
+      .stacked-avatars {
+        display: block;
+      }
     }
   </style>
   <body>
     <div class="w-full banner mb-20">
+      <div
+        id="mobile-menu"
+        class="fixed w-3/5 h-screen bg-white hidden animate__animated animate__fadeInLeft bg-blue-gold"
+      >
+        <div
+          class="w-full h-full py-6 px-4 flex flex-col items-start justify-start"
+        >
+          <div class="w-full flex flex-row items-center justify-between">
+            <img src="./assets/goldville-org.svg" class="h-6" alt="Goldville" />
+          </div>
+          <div class="mt-10 w-full">
+            <ul
+              class="flex flex-col items-start justify-between text-white space-y-1"
+            >
+              <li><a>Home</a></li>
+              <li><a>Rates</a></li>
+              <li><a>Products</a></li>
+              <li><a>Company</a></li>
+              <li><a>Blog</a></li>
+            </ul>
+          </div>
+          <div
+            class="mt-10 flex flex-col items-start space-y-3 text-white space-y-3 w-full"
+          >
+            <a href="./login.html" class="font-bold">Log In</a>
+            <a
+              href="./register.html"
+              class="w-full px-4 py-2 bg-green-goldville text-white rounded"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+
       <nav class="mb-10 h-auto py-5 px-2 text-dark-goldville">
         <div class="container h-auto mx-auto flex items-center justify-between">
           <div class="">
@@ -216,21 +266,31 @@
             </div>
           </div>
           <div class="hidden sm:block">
-            <ul class="flex flex-row items-center justify-between space-x-9">
+            <ul
+              class="flex flex-row items-center justify-between sm:space-x-3 md:space-x-9"
+            >
               <li><a>Rates</a></li>
               <li><a>Products</a></li>
               <li><a>Company</a></li>
               <li><a>Blog</a></li>
             </ul>
           </div>
-          <div class="hidden md:flex items-center justify-between space-x-3">
+          <div class="hidden sm:flex items-center justify-between space-x-3">
             <a href="./login.html" class="font-bold">Log In</a>
             <button class="px-4 py-2 bg-green-goldville text-white rounded">
               Get Started
             </button>
           </div>
           <div class="sm:hidden">
-            <button>
+            <!-- <button id="closeBtn" class="hidden" onclick="openNav()">
+              <a
+                href="javascript:void(0)"
+                class="text-4xl text-dark-goldville closebtn"
+                onclick="closeNav()"
+                >&times;</a
+              >
+            </button> -->
+            <button onclick="openNav()" class="focus:outline-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -252,8 +312,8 @@
         </div>
       </nav>
       <div class="container mx-6 md:mx-auto">
-        <div class="sm:flex sm:items-start sm:justify-between">
-          <div class="flex-shrink-0">
+        <div class="md:flex md:items-start md:justify-between">
+          <div class="flex-shrink-0 pr-3 sm:pr-0">
             <h2
               class="text-dark-goldville font-bold text-4xl banner-heading mb-3"
             >
@@ -261,51 +321,64 @@
               Currency Trading <br />
               Platform
             </h2>
-            <p class="text-sm mb-3 text-gray-gold leading-7">
-              Sell your Bitcoin, Ethereum, Theter, Amazon, iTunes, Google Play,
-              Netflix, <br />
-              Walmart, Paypal, Payoneer etc. for instant Payment on Goldville.
-            </p>
+            <div class="sm:w-full w-72">
+              <p
+                class="text-xs sm:text-sm mb-3 text-gray-gold leading-2 sm:leading-7 text-justify"
+              >
+                Sell your Bitcoin, Ethereum, Theter, Amazon, iTunes, Google
+                Play, Netflix, <br class="hidden sm:block" />
+                Walmart, Paypal, Payoneer etc. for instant Payment on Goldville.
+              </p>
+            </div>
             <div class="flex items-center">
-              <button
+              <a
+                href="./register.html"
                 class="px-6 mr-2 py-2 rounded-full bg-green-goldville text-white"
               >
                 Start Trading
-              </button>
+              </a>
               <span class="text-sm"
                 >or
                 <span class="text-blue-gold font-bold">About Us ></span></span
               >
             </div>
           </div>
-          <div class="hidden sm:block sm:flex-shrink-0 animate__fadeInRight">
+          <div
+            class="hidden md:block md:flex-shrink-0 animate__animated animate__fadeInRight"
+          >
             <img src="./assets/featured-image.svg" class="w-auto h-96" alt="" />
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="w-full mb-24 px-10">
-      <div class="container">
-        <div class="text-center mb-8">
-          <h2 class="text-dark-goldville text-4xl font-bold">
+
+    <div class="w-full my-20 px-6">
+      <div class="container w-full">
+        <div class="w-full text-center mb-8">
+          <h2 class="text-dark-goldville text-2xl font-bold">
             Trade With Our Trusted Partners
           </h2>
-          <p class="text-dark-goldville font-light text-sm md:text-lg mt-2">
+          <p
+            class="text-dark-goldville font-light text-sm md:text-lg mt-2 text-center"
+          >
             We are making our membership plan to think about our Clients. You
-            can take the membership <br />
+            can take the membership <br class="hidden sm:block" />
             with matching your needs. there is no hidden charge.
           </p>
         </div>
-        <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+        <div
+          class="w-full container grid gap-10 md:grid-cols-2 lg:grid-cols-3 sm:space-y-0"
+        >
           <div class="w-full">
-            <div class="w-80 md:w-82 bg-white img-card">
+            <div class="bg-white w-full h-68 img-card rounded-3xl">
               <img
                 src="./assets/giftcarrd.png"
-                class="rounded-img h-img"
+                class="w-full h-full rounded-3xl"
                 alt="giftcards"
               />
             </div>
-            <div class="w-80 md:w-82 mt-10">
+            <div class="w-full mt-12">
               <h4 class="text-lg text-dark-goldville font-bold mb-3">
                 Trade Gift Cards
               </h4>
@@ -318,14 +391,14 @@
             </div>
           </div>
           <div class="w-full">
-            <div class="w-80 md:w-82 bg-white img-card">
+            <div class="bg-white w-full h-68 img-card rounded-3xl">
               <img
                 src="./assets/person-phone.png"
-                class="h-img "
+                class="w-full h-full rounded-3xl"
                 alt="person-phone"
               />
             </div>
-            <div class="w-80 md:w-82 mt-10">
+            <div class="w-full mt-12">
               <h4 class="text-lg text-dark-goldville font-bold mb-3">
                 Trade & store Cryptocurrency
               </h4>
@@ -338,11 +411,15 @@
               <p class="text-sm text-blue-gold font-bold">Get Started ></p>
             </div>
           </div>
-          <div class="w-full mx-auto">
-            <div class="w-80 md:w-82 bg-white img-card">
-              <img src="./assets/loadairtime.png" class="h-img" alt="giftcards" />
+          <div class="w-full">
+            <div class="bg-white w-full h-68 img-card rounded-3xl">
+              <img
+                src="./assets/loadairtime.png"
+                class="w-full h-full rounded-3xl"
+                alt="giftcards"
+              />
             </div>
-            <div class="w-80 md:w-82 mt-10">
+            <div class="w-full mt-12">
               <h4 class="text-lg text-dark-goldville font-bold mb-3">
                 Pay Bills & Airtime
               </h4>
@@ -356,17 +433,18 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
+
     <div class="w-full curved mb-10 py-5">
-      <div class="container md:w-3/4 mx-auto space-y-9 px-10 md:px-16">
+      <div class="container md:w-3/4 mx-auto space-y-9 px-10 md:px-5">
         <div class="md:flex items-center">
-          <img src="./assets/card.svg" alt="" class="w-72 z-auto -mt-14" />
+          <img src="./assets/card.svg" alt="" class="w-72 -mt-14" />
           <div class="flex flex-col items-start text-white ml-5">
             <h4 class="mb-3 font-bold text-2xl mt-5 md:mt-0">
               Virtual and physical <br />
               Credit Card
             </h4>
-            <div class="mb-3">
+            <div class="w-82 mb-3">
               <p class="text-sm text-justify">
                 Use your virtual debit card online to pay for your Netflix
                 subscription, shopping on Amazon, or use your credit card
@@ -385,19 +463,19 @@
               The best way to trade <br />
               and transact.
             </h4>
-            <div class="mb-3">
-              <p class="text-sm">
-                A simple bank wallet system that makes it easy <br />
-                to store your money, trade, and transact across <br />
-                the world with Goldville. and get a virtual and <br />
-                physical credit card to make transactions online and offline.
+            <div class="w-82 mb-3">
+              <p class="text-sm text-justify">
+                A simple bank wallet system that makes it easy to store your
+                money, trade, and transact across the world with Goldville. and
+                get a virtual and physical credit card to make transactions
+                online and offline.
               </p>
             </div>
             <button class="px-8 py-2 bg-green-goldville rounded-full">
               Read More
             </button>
           </div>
-          <img src="./assets/piggy.png" alt="" class="w-72 z-auto -mb-14" />
+          <img src="./assets/piggy.png" alt="" class="w-72 -mb-14" />
         </div>
       </div>
     </div>
@@ -408,6 +486,33 @@
           people all over the world
         </h3>
       </div>
+      <div class="stacked-avatars">
+        <div
+          class="w-full flex items-center justify-center -space-x-2 overflow-hidden my-4"
+        >
+          <img
+            class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+            src="./assets/tl.png"
+            alt=""
+          />
+          <img
+            class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+            src="./assets/bl.png"
+            alt=""
+          />
+          <img
+            class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+            src="./assets/br.png"
+            alt=""
+          />
+          <img
+            class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+            src="./assets/cl.png"
+            alt=""
+          />
+        </div>
+      </div>
+
       <div class="container w-full h-full">
         <div
           class="container md:w-3/4 mx-auto md:h-98 map flex flex-col items-center justify-center"
@@ -525,10 +630,10 @@
             Our products are used by more than 1000+ daily
           </p>
         </div>
-        <div class="mx-20 bg-curved-top">
+        <div class="mx-5 sm:mx-20 bg-curved-top">
           <img
             src="./assets/websitefooterimage2.png"
-            class="mx-auto"
+            class="w-full h-24 sm:mx-auto"
             alt="websiteimg"
           />
         </div>
@@ -586,9 +691,9 @@
       </div>
 
       <!-- bottom footer -->
-      <div class="py-4 md:px-16 px-5 bg-white">
+      <div class="w-full py-4 md:px-16 px-2 bg-white">
         <div class="flex items-center justify-between">
-          <div class="md:flex md:items-center md:justify-between">
+          <div class="w-22 md:flex md:items-center md:justify-between">
             <button>
               <svg
                 class="w-7 h-5"
@@ -629,13 +734,13 @@
               </svg>
             </button>
           </div>
-          <div class="text-xs md:text-sm">
+          <div class="hidden text-xs md:text-sm sm:block">
             <p>
               COPYRIGHT GOLDVILLE 2020 - TERMS & CONDITIONS &middot; PRIVACY
               POLICY
             </p>
           </div>
-          <div class="">
+          <div class="order-first sm:order-last">
             <svg
               class="w-40 h-6"
               viewBox="0 0 161 27"
@@ -671,10 +776,22 @@
             </svg>
           </div>
         </div>
+        <div class="py-3 text-center text-xs sm:hidden">
+          <p>
+            COPYRIGHT GOLDVILLE 2020 - TERMS & CONDITIONS &middot; PRIVACY
+            POLICY
+          </p>
+        </div>
       </div>
     </footer>
+
+    <script>
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+        // document.getElementById("openBtn").classList.toggle("hidden");
+        // document.getElementById("closeBtn").classList.toggle("hidden");
+      }
+    </script>
   </body>
 </html>
-
-<!-- mobile menu -->
-<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2 w-8 h-8 text-white transform -rotate-90"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> -->
