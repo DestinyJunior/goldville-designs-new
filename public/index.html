@@ -151,7 +151,7 @@
      
     } */
 
-    .curved {
+    /* .curved {
       background: url("./assets/new/cbl.svg"), url("./assets/new/cbn.svg"),
         url("./assets/new/cet.svg"), url("./assets/new/cblc.svg"),
         url("./assets/new/ebl.svg"), url("./assets/new/cet.svg"),
@@ -168,9 +168,7 @@
         auto, auto 100%;
       background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem, 18rem,
         auto 100%;
-      /* width: 100%;
-      height: 100%; */
-    }
+    } */
 
     .bg-blue-gold {
       background-color: #0083ff;
@@ -216,6 +214,44 @@
       background-size: auto;
     }
 
+    .curved {
+      background: url("./assets/new/cbl.svg"), url("./assets/new/cbn.svg"),
+        url("./assets/new/cet.svg"), url("./assets/new/cblc.svg"),
+        url("./assets/new/ebl.svg"), url("./assets/new/cet.svg"),
+        url("./assets/new/cbd.svg"), url("./assets/curved.svg");
+      background-repeat: no-repeat;
+      background-position: top -9% right 10%, top 10% right, left 12% top 20%,
+        left 15% top 50%, top 7% left 7%, bottom 28% right 11%,
+        bottom 10% right 9%, center;
+      -webkit-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+        auto, auto 100%;
+      -moz-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+        auto, auto 100%;
+      -o-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+        auto, auto 100%;
+      background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem, 18rem,
+        auto 100%;
+    }
+
+    .decorated-circles {
+      background-image: url("./assets/new/ebl.svg"), url("./assets/new/er.svg");
+      background-repeat: no-repeat;
+      background-position: bottom 8% left, right 6% bottom 25%;
+      background-size: 3.3rem, auto;
+    }
+
+    .decorated-images {
+      background-image: url("./assets/new/fr.svg"), url("./assets/new/fl.svg"),
+        url("./assets/new/tl.svg"), url("./assets/new/ebl.svg"),
+        url("./assets/new/esmbl.svg"), url("./assets/new/esmbl.svg"),
+        url("./assets/new/er.svg");
+      background-repeat: no-repeat;
+      background-position: bottom -4rem right, bottom -6.654rem left,
+        top 14% left 4%, bottom 48% left, bottom 10% left 3.3%, top left 10%,
+        right 6% bottom 62%;
+      background-size: 22.586rem, 12.54rem, 12.54rem, 3.3rem, auto, 1.8rem, auto;
+    }
+
     .stacked-avatars {
       display: none;
     }
@@ -249,23 +285,46 @@
       }
     }
 
-    .decorated-circles {
-      background-image: url("./assets/new/ebl.svg"), url("./assets/new/er.svg");
-      background-repeat: no-repeat;
-      background-position: bottom 8% left, right 6% bottom 25%;
-      background-size: 3.3rem, auto;
-    }
+    @media (min-width: 1024px) {
+      .curved {
+        background: url("./assets/new/cbl.svg"), url("./assets/new/cbn.svg"),
+          url("./assets/new/cet.svg"), url("./assets/new/cblc.svg"),
+          url("./assets/new/ebl.svg"), url("./assets/new/cet.svg"),
+          url("./assets/new/cbd.svg"), url("./assets/curved.svg");
+        background-repeat: no-repeat;
+        background-position: top -9% right 10%, top 10% right, left 12% top 20%,
+          left 15% top 50%, top 7% left 7%, bottom 28% right 11%,
+          bottom 10% right 9%, center;
+        -webkit-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem,
+          11rem, auto, auto 100%;
+        -moz-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+          auto, auto 100%;
+        -o-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+          auto, auto 100%;
+        background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+          18rem, auto 100%;
+      }
 
-    .decorated-images {
-      background-image: url("./assets/new/fr.svg"), url("./assets/new/fl.svg"),
-        url("./assets/new/tl.svg"), url("./assets/new/ebl.svg"),
-        url("./assets/new/esmbl.svg"), url("./assets/new/esmbl.svg"),
-        url("./assets/new/er.svg");
-      background-repeat: no-repeat;
-      background-position: bottom -4rem right, bottom -6.654rem left,
-        top 14% left 4%, bottom 48% left, bottom 10% left 3.3%, top left 10%,
-        right 6% bottom 62%;
-      background-size: 22.586rem, 12.54rem, 12.54rem, 3.3rem, auto, 1.8rem, auto;
+      .decorated-circles {
+        background-image: url("./assets/new/ebl.svg"),
+          url("./assets/new/er.svg");
+        background-repeat: no-repeat;
+        background-position: bottom 8% left, right 6% bottom 25%;
+        background-size: 3.3rem, auto;
+      }
+
+      .decorated-images {
+        background-image: url("./assets/new/fr.svg"), url("./assets/new/fl.svg"),
+          url("./assets/new/tl.svg"), url("./assets/new/ebl.svg"),
+          url("./assets/new/esmbl.svg"), url("./assets/new/esmbl.svg"),
+          url("./assets/new/er.svg");
+        background-repeat: no-repeat;
+        background-position: bottom -4rem right, bottom -6.654rem left,
+          top 14% left 4%, bottom 48% left, bottom 10% left 3.3%, top left 10%,
+          right 6% bottom 62%;
+        background-size: 22.586rem, 12.54rem, 12.54rem, 3.3rem, auto, 1.8rem,
+          auto;
+      }
     }
 
     /* .footer-bg {
@@ -274,6 +333,47 @@
       background-position: top right 6%;
       background-size: 1.8rem;
     } */
+
+    @media (max-width: 640px) {
+      .curved {
+        background: url("./assets/new/cbl.svg"), url("./assets/new/cbn.svg"),
+          url("./assets/new/cet.svg"), url("./assets/new/cblc.svg"),
+          url("./assets/new/ebl.svg"), url("./assets/new/cet.svg"),
+          url("./assets/new/cbd.svg"), url("./assets/curved.svg");
+        background-repeat: no-repeat;
+        background-position: top -9% right 10%, top 10% right, left 12% top 14%,
+          left 15% top 14%, top 7% left 7%, bottom 16% right 11%,
+          bottom 10% right 9%, center;
+        /* -webkit-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+        auto, auto 100%;
+      -moz-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+        auto, auto 100%;
+      -o-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+        auto, auto 100%; */
+        background-size: 14.56rem, auto 3.8rem, 9rem, 5rem, 3.3rem, 9rem, 14rem,
+          auto 100%;
+      }
+
+      .decorated-circles {
+        background-image: url("./assets/new/ebl.svg"),
+          url("./assets/new/er.svg");
+        background-repeat: no-repeat;
+        background-position: bottom 8% left, right 6% bottom 25%;
+        background-size: 3.3rem, auto;
+      }
+
+      .decorated-images {
+        background-image: url("./assets/new/fr.svg"), url("./assets/new/fl.svg"),
+          url("./assets/new/tl.svg"), url("./assets/new/ebl.svg"),
+          url("./assets/new/esmbl.svg"), url("./assets/new/esmbl.svg"),
+          url("./assets/new/er.svg");
+        background-repeat: no-repeat;
+        background-position: bottom -4rem right, bottom -3.254rem left,
+          top 34% left 4%, bottom 48% left, bottom 10% left 3.3%, top left 10%,
+          right 3% bottom 62%;
+        background-size: 11.586rem, 6.54rem, 6.54rem, 3rem, auto, 1.2rem, auto;
+      }
+    }
   </style>
   <body>
     <div class="w-full nav-bg banner mb-20">
