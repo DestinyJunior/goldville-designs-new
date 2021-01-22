@@ -11,6 +11,10 @@
     />
   </head>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     .bg-green-goldville {
       background-color: #62d467;
     }
@@ -125,15 +129,47 @@
       height: 15rem;
     }
 
+    .banner {
+      background: url("./assets/new/headerbg.svg"),
+        linear-gradient(
+          180deg,
+          #e5efff 0%,
+          rgba(229, 239, 255, 0.262661) 83.7%,
+          rgba(229, 239, 255, 0) 100%
+        );
+      background-repeat: no-repeat;
+      background-position: top right, 100%;
+      -webkit-background-size: 30rem, 100%;
+      -moz-background-size: 30rem, 100%;
+      -o-background-size: 30rem, 100%;
+      background-size: 30rem, 100%;
+    }
+    /* .nav-bg {
+      background: ;
+      background-repeat: no-repeat;
+     
+     
+    } */
+
     .curved {
-      background: url("./assets/curved.svg") no-repeat;
-      background-position: center;
-      -webkit-background-size: auto 100%;
-      -moz-background-size: auto 100%;
-      -o-background-size: auto 100%;
-      background-size: auto 100%;
-      width: 100%;
-      height: 100%;
+      background: url("./assets/new/cbl.svg"), url("./assets/new/cbn.svg"),
+        url("./assets/new/cet.svg"), url("./assets/new/cblc.svg"),
+        url("./assets/new/ebl.svg"), url("./assets/new/cet.svg"),
+        url("./assets/new/cbd.svg"), url("./assets/curved.svg");
+      background-repeat: no-repeat;
+      background-position: top -9% right 10%, top 10% right, left 12% top 20%,
+        left 15% top 50%, top 7% left 7%, bottom 28% right 11%,
+        bottom 10% right 9%, center;
+      -webkit-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+        auto, auto 100%;
+      -moz-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+        auto, auto 100%;
+      -o-background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem,
+        auto, auto 100%;
+      background-size: 14.56rem, auto 3.8rem, 15rem, 9rem, 3.3rem, 11rem, 18rem,
+        auto 100%;
+      /* width: 100%;
+      height: 100%; */
     }
 
     .bg-blue-gold {
@@ -151,15 +187,6 @@
 
     .rounded-img {
       border-radius: 20px;
-    }
-
-    .banner {
-      background: linear-gradient(
-        180deg,
-        #e5efff 0%,
-        rgba(229, 239, 255, 0.262661) 83.7%,
-        rgba(229, 239, 255, 0) 100%
-      );
     }
 
     .bg-images {
@@ -221,9 +248,35 @@
         height: 6rem;
       }
     }
+
+    .decorated-circles {
+      background-image: url("./assets/new/ebl.svg"), url("./assets/new/er.svg");
+      background-repeat: no-repeat;
+      background-position: bottom 8% left, right 6% bottom 25%;
+      background-size: 3.3rem, auto;
+    }
+
+    .decorated-images {
+      background-image: url("./assets/new/fr.svg"), url("./assets/new/fl.svg"),
+        url("./assets/new/tl.svg"), url("./assets/new/ebl.svg"),
+        url("./assets/new/esmbl.svg"), url("./assets/new/esmbl.svg"),
+        url("./assets/new/er.svg");
+      background-repeat: no-repeat;
+      background-position: bottom -4rem right, bottom -6.654rem left,
+        top 14% left 4%, bottom 48% left, bottom 10% left 3.3%, top left 10%,
+        right 6% bottom 62%;
+      background-size: 22.586rem, 12.54rem, 12.54rem, 3.3rem, auto, 1.8rem, auto;
+    }
+
+    /* .footer-bg {
+      background-image: url("./assets/new/ebl.svg");
+      background-repeat: no-repeat;
+      background-position: top right 6%;
+      background-size: 1.8rem;
+    } */
   </style>
   <body>
-    <div class="w-full banner mb-20">
+    <div class="w-full nav-bg banner mb-20">
       <div
         id="mobile-menu"
         class="fixed w-3/5 h-screen bg-white hidden animate__animated animate__fadeInLeft bg-blue-gold"
@@ -259,7 +312,7 @@
         </div>
       </div>
 
-      <nav class="mb-10 h-auto py-5 px-2 text-dark-goldville">
+      <nav class="w-full mb-10 h-auto py-5 px-2 text-dark-goldville">
         <div class="container h-auto mx-auto flex items-center justify-between">
           <div class="">
             <div>
@@ -574,7 +627,7 @@
       </div>
     </div>
     <div class="w-full px-10 md:px-16 mb-6 mt-10">
-      <div class="md:px-16">
+      <div class="md:px-16 decorated-circles">
         <div class="container text-center mb-12">
           <h2 class="text-dark-goldville text-4xl font-bold">Why Choose Us.</h2>
           <p class="text-dark-goldville font-light text-lg mt-2">
@@ -625,7 +678,7 @@
         </div>
       </div>
     </div>
-    <div class="w-full">
+    <div class="w-full decorated-images">
       <div class="pt-2">
         <div class="text-center mb-2">
           <h1 class="text-dark-goldville text-4xl font-bold">
@@ -655,9 +708,16 @@
       </div>
     </div>
     <!-- footer -->
-    <footer class="">
+    <footer class="relative">
       <!-- top footer -->
+
+      <!--  -->
       <div class="bg-green-goldville px-10 md:px-16 py-12">
+        <img
+          src="./assets/new/ebl.svg"
+          alt="circle"
+          class="absolute -top-6 right-12 w-14"
+        />
         <div class="container mx-auto md:px-16">
           <div class="md:flex md:justify-between text-white">
             <div>
